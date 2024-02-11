@@ -9,7 +9,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let album_endpoint = String::from("/api/album");
 
     // First get env vars
-    let env_variables = read_file("example/.env")?;
+    let env_variables = read_file(".env")?;
     let server_addr = String::from(&env_variables["SERVER_ADDRESS"]);
     let api_key = String::from(&env_variables["API_KEY"]);
     println!("{:?}", api_key);
